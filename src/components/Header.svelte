@@ -8,7 +8,7 @@
     <Logo />
     <nav>
         <Link text="Inicio"/>
-        <Link text="Peliculas"/>
+        <Link text="Películas"/>
         <Link text="Series"/>
         <Link text="Colecciones"/>
         <Link text="Festivales"/>
@@ -41,8 +41,21 @@
         background-color: transparent;
         border: 2px solid #fff;
     }
+    #btn-login:hover{
+        border-color: #6f6f81;
+    }
+    #btn-login:active{
+        background-color: #6f6f81;
+    }
     img{
         width: 25px;
         height: 25px;
+    }
+    #btn-sub:hover{
+        background-color: #5effc3;
+    }
+    #btn-sub:active{
+        background-color: #0c8f65;
+        border: none;
     }
 </style>

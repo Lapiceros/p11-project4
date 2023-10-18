@@ -10,4 +10,7 @@
         color: #fff;
         margin: 0 10px;
     }
+    a:hover{
+        color: #02ffa1;
+    }
 </style>

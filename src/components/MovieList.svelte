@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
     const url ='https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&page=1&sort_by=popularity.desc';
 
     const options = {
@@ -10,11 +12,14 @@
     };
 
     let movies = [];
+    onMount(()=>
+        fetch(url, options)
+        .then(response => response.json())
+        .then(data => movies = data.results)
+        .catch(err => console.error(err))
+    );
 
-    fetch(url, options)
-    .then(response => response.json())
-    .then(data => movies = data.results)
-    .catch(err => console.error(err));
+    
 </script>
 
 <div>
@@ -36,5 +41,6 @@
         height: 200px;
         object-fit: cover;
         padding: 1rem;
+        border-radius: 20px;
     }
 </style>
