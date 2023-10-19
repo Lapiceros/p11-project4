@@ -28,6 +28,7 @@
         align-items: center;
         margin: 20px 40px;
         gap: 20px;
+        background-color: black;
     }
     .flex-grow-1{
         flex-grow: 1 !important;

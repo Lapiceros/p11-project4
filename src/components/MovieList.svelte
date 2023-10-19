@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
 
-    const url ='https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&page=1&sort_by=popularity.desc';
+    const url =`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&with_genres=${28}`;
 
     const options = {
         method: 'GET',
@@ -16,6 +16,7 @@
         fetch(url, options)
         .then(response => response.json())
         .then(data => movies = data.results)
+        .then(data => console.log(data))
         .catch(err => console.error(err))
     );
 
@@ -38,7 +39,7 @@
     }
     img{
         width: 275px;
-        height: 200px;
+        height: 400px;
         object-fit: cover;
         padding: 1rem;
         border-radius: 20px;
