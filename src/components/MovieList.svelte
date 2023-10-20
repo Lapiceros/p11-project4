@@ -1,4 +1,5 @@
 <script>
+    import Slider from './Slider.svelte'
     import { onMount } from "svelte";
 
     const url =`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&with_genres=${28}`;
@@ -16,7 +17,6 @@
         fetch(url, options)
         .then(response => response.json())
         .then(data => movies = data.results)
-        .then(data => console.log(data))
         .catch(err => console.error(err))
     );
 
@@ -24,9 +24,7 @@
 </script>
 
 <div>
-    {#each movies as movie}
-    <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="cover">
-    {/each}
+    <Slider />
 </div>
 
 
@@ -36,12 +34,5 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
-    }
-    img{
-        width: 275px;
-        height: 400px;
-        object-fit: cover;
-        padding: 1rem;
-        border-radius: 20px;
     }
 </style>
