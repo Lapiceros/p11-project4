@@ -2,6 +2,7 @@
     import Logo from './Logo.svelte';
     import Link from './Link.svelte';
     import Lupa from '../assets/lupa.svg';
+    import Lupa_verde from '../assets/lupa_verde.svg'
 </script>
 
 <header>
@@ -17,7 +18,11 @@
     <div class="flex-grow-1"></div>
     <button id="btn-sub">SUSCRÍBETE</button>
     <button id="btn-login">INICIAR SESIÓN</button>
-    <img src={Lupa} alt="Icono de buscada">
+    <div>
+        <img src={Lupa} alt="Icono de busqueda">
+        <img id="lupa" src={Lupa_verde} alt="Icono de busqueda"/>
+    </div>
+    
 
 </header>
 
@@ -53,6 +58,15 @@
         width: 25px;
         height: 25px;
     }
+    #lupa{
+        position: absolute;
+        right: 48px;
+        opacity: 0;
+    }
+    #lupa:hover{
+        opacity: 1;
+    }
+
     #btn-sub:hover{
         background-color: #5effc3;
     }

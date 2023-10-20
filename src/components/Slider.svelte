@@ -26,7 +26,7 @@
 
     function iniciarSlider() {
         let swiper = new Swiper(".swiper", {
-        slidesPerView: 4,
+        slidesPerView: 5,
         direction: getDirection(),
         navigation: {
             nextEl: ".swiper-button-next",
