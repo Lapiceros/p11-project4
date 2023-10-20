@@ -23,12 +23,12 @@
 
 <style>
     header {
+        font-size: 20px;
         display:flex;
         justify-content: flex-start;
         align-items: center;
         margin: 20px 40px;
         gap: 20px;
-        background-color: black;
     }
     .flex-grow-1{
         flex-grow: 1 !important;
@@ -36,6 +36,7 @@
     #btn-sub{
         background-color: #02ffa1;
         border: none;
+    
     }
     #btn-login{
         color: #fff;

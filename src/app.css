@@ -1,11 +1,14 @@
 html, body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+  sans-serif;
+  font-weight: bolder;
   background-color: #060613;
   margin: none;
 }
 
 
 button{
+  font-weight: bolder;
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;

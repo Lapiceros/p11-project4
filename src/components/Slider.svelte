@@ -14,8 +14,8 @@
     };
 
     let movies = [];
-    onMount(() => {
-        fetch(url, options)
+    onMount(async() => {
+        await fetch(url, options)
         .then((response) => response.json())
         .then((data) => {
             movies = data.results;
@@ -67,9 +67,6 @@
     }
     .genre {
         color: #fff;
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-        font-weight: bolder;
     }
 
     .genre:hover {
@@ -80,17 +77,19 @@
         transition: transform 0.3s;
         height: 250px;
         width: 175px;
+        border-radius: 8px;
     }
     img:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         box-shadow: 1px 1px 5px 1px #02ffa1;
-        z-index: 200;
     }
     .swiper {
         width: 100%;
         height: 400px;
     }
-
+    .swiper-wrapper{
+        gap: 20px;
+    }
     .swiper-slide {
         text-align: center;
         font-size: 18px;
